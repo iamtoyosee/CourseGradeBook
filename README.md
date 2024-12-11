@@ -1,11 +1,42 @@
-# CourseGradeBook
-This project implements a Gradebook abstraction in Java, providing methods to manage and retrieve student scores for assignments. The CourseGradebook class extends the abstract Gradebook class, storing grades in a structured way and supporting functionalities like fetching sorted assignment names, retrieving student-specific scores, and updating grades efficiently.
+# CourseGradebook: A Java-Based Grade Management System
 
-Features:
+## Overview
+CourseGradebook is a Java application designed to manage and retrieve student grades efficiently. It implements an abstract `Gradebook` class and provides functionalities for adding, updating, and retrieving scores for assignments and students. The project demonstrates core object-oriented programming concepts such as abstraction, inheritance, and efficient use of Java collections.
 
-Add and update scores for assignments and students.
-Retrieve scores for specific students or assignments.
-Get sorted lists of assignments and student IDs.
-Retrieve all scores for a specific student or assignment.
-This project demonstrates object-oriented programming principles, including inheritance and abstraction, while showcasing efficient use of Java collections like HashMap and ArrayList.
+## Features
+- **Add or Update Scores**: Easily set or update a student’s score for a specific assignment.
+- **Retrieve Scores**:
+  - Get a specific student's score for an assignment.
+  - Retrieve all scores for a specific assignment.
+  - Retrieve all scores for a specific student.
+- **Sort Data**:
+  - Get all distinct assignment names sorted in ascending order.
+  - Get all distinct student IDs sorted in ascending order.
 
+## Classes
+
+### `Gradebook` (Abstract Class)
+Defines the structure and methods that any gradebook implementation must support, including:
+- `getScore`: Retrieve a student's score for a specific assignment.
+- `setScore`: Add or update a student's score.
+- `getAssignmentScores`: Get all scores for a specific assignment.
+- `getSortedAssignmentNames`: Retrieve a sorted list of all assignment names.
+- `getSortedStudentIDs`: Retrieve a sorted list of all student IDs.
+- `getStudentScores`: Retrieve all scores for a specific student.
+
+### `CourseGradebook` (Concrete Class)
+Implements the `Gradebook` interface with the following functionality:
+- Stores grades using a `HashMap` where:
+  - Keys are assignment names.
+  - Values are another `HashMap` mapping student IDs to their scores.
+- Provides methods to manage and query the gradebook.
+
+## Technologies
+- **Language**: Java
+- **Libraries Used**: Java Collections (`HashMap`, `ArrayList`, `HashSet`)
+
+## Getting Started
+
+### Prerequisites
+- Java Development Kit (JDK) version 8 or above.
+- A Java IDE or text editor (e.g., IntelliJ IDEA, Eclipse, or VS Code).
